@@ -12,7 +12,12 @@ def click(x, y):
 
 def backapi():
     # 61 160
-    click(61, 160)
+    # click(61, 160) # z左上角返回按钮
+    # click(984, 169) # 右上角返回
+    # adb shell input keyevent 4 #返回按钮触发
+    cmds = "adb shell input keyevent 4"
+    os.system(cmds)
+
 
 
 def canscroll():
@@ -33,11 +38,14 @@ def canscroll():
 def click_ok(idx):
     count = 0
     # click(880, 1353)
-    click(900, 1716)#//0/20的点击点 此处设置点击位置
+    # 0/8的点坐标  890 1147
+    # click(890, 1147)
+    click(893, 2021)#//0/20的点击点 此处设置点击位置
+    # click(903, 1357) # 0/1点
     # 900 1716
-    time.sleep(1)
+    time.sleep(4)
     print("输出内容"+str(idx))
-    idxs = 20 + random.randint(0,7)
+    idxs = 20 + random.randint(5,7)
     for idx in range(idxs):
         print("输出测试内容11==>>:", idx)
         canscroll()
@@ -62,4 +70,5 @@ def main():
 if __name__ == "__main__":
     print("测试???11")
     main()
+    # backapi()
     # canscroll()
