@@ -37,12 +37,13 @@ def click_ok(idx):
     # 900 1716
     time.sleep(1)
     print("输出内容"+str(idx))
-    for idx in range(30):
+    idxs = 20 + random.randint(0,7)
+    for idx in range(idxs):
         print("输出测试内容11==>>:", idx)
         canscroll()
-        time.sleep(1.5)
+        time.sleep(1)
         count = count+1
-        if count >= 30:
+        if count >= idxs:
             backapi()
             time.sleep(3)
 
