@@ -65,14 +65,18 @@ def deletes(args):
         cookies=cookiesText,
         headers=headers,
         data={
-            "venderIds":getarrStr
+            "venderIds": getarrStr
         }
     )
     content = str(res1.content.decode('utf-8'))
-    print('调用结果>>??',content)
+    print('调用结果>>??', content)
     main()
 
 
-# https://t.jd.com/follow/vender/batchUnfollow.do
+# def userendant(args):
+
+
+    # https://t.jd.com/follow/vender/batchUnfollow.do
+    # 时代的
 if __name__ == "__main__":
     main()
